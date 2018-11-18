@@ -1,0 +1,44 @@
+<% include plantilla/inicio%>
+<div class="container">
+    <div class="row">
+        <form action="">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h4>Lista de Empleado</h4>
+                </div>
+                <div class="panel-body text-center">
+                    <table class="table table-bordered tabe-hover">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Nombres</th>
+                                <th>Departamento</th>
+                                <th>Puesto</th>
+                                <th>Forma de Pago</th>
+                                <th>Salario</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <% if(datoContrato) { %>
+                                    <% for (var i = 0; i < datoContrato.length; i++) {%>
+                                        <tr>
+                                            <td><%= (i + 1) %></td>
+                                            <td><%= datoContrato[i].pnombre + " " + datoContrato[i].snombre + " " + datoContrato[i].papellido + " " + datoContrato[i].sapellido  %></td>
+                                            <td><%= datoContrato[i].departamento %></td>
+                                            <td><%= datoContrato[i].puesto %></td>
+                                            <td><%= datoContrato[i].formapago %></td>
+                                            <td><%= datoContrato[i].salario %></td>
+                                            <td><a href="/deletecontrato/<%= datoContrato[i].id_contrato %>" class="btn btn-danger glyphicon glyphicon-remove"></a></td>
+                                        </tr>
+                                    <%}%>
+                                <%}%>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<% include plantilla/final %>

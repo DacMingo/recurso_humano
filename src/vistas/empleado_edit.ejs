@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Empledo</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/alertify.min.js"></script>
+    
+  <style>
+    .panel-heading{
+	      background-color: #2d7a6c !important;
+	      color: #ffffff !important;
+    }
+    .navbar{
+	      background-color: #2d7a6c !important;
+    }
+
+    .navbar-brand:link,.navbar-brand:visited{
+	      color: #ffffff !important;
+    }
+
+    .navbar-brand:hover,.navbar-brand:active{
+      	color: #050505 !important;
+    }
+
+    #navbar li a:link,#navbar li a:visited{
+	      color: #ffffff !important;
+    }
+
+    #navbar li a:hover,#navbar li a:active{
+      	color: #050505 !important;
+    }
+
+    
+  </style>
+
+</head>
+<body>
+    <br>
+<form action="/update/<%= dato.id_empleado %>" method="post">
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-primary text-center">
+                <div class="panel-heading">
+                    <label>
+                        <h4>MODIFICAR EMPLEADO</h4>
+                    </label>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <input type="text" value="1" name="id_usuario" hidden>
+
+                        <label class="col-md-1 control-label">DPI: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="dpi" value="<%= dato.dpi %>" class="form-control">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">NIT: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="nit" value="<%= dato.nit %>" class="form-control">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">No. IGSS: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="noigss" value="<%= dato.noigss %>" class="form-control">
+                        </div>
+
+
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary form-control">Modificar</button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+
+                        <label class="col-md-1 control-label">Nombre: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="pnombre" class="form-control" value="<%= dato.pnombre %>">
+                        </div>
+
+
+                        <div class="col-md-2">
+                            <input type="text" name="snombre" class="form-control" value="<%= dato.snombre %>">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">Apellido: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="papellido" class="form-control" value="<%= dato.papellido %>">
+                        </div>
+
+
+                        <div class="col-md-2">
+                            <input type="text" name="sapellido" class="form-control" value="<%= dato.sapellido %>">
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+
+                        <label class="col-md-1 control-label">Sexo: </label>
+                        <div class="col-md-1">
+                            <select class="form-control" name="sexo" value="<%= dato.sexo %>">
+                                <option value="M">M</option>
+                                <option value="F">F</option>
+                            </select>
+                        </div>
+
+
+                        <label class="col-md-1 control-label">Telefono: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="telefono" class="form-control" value="<%= dato.telefono %>">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">Correo: </label>
+                        <div class="col-md-2">
+                            <input type="email" name="correo" class="form-control" value="<%= dato.correo %>">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">Pais: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="pais" class="form-control" value="<%= dato.pais %>">
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+
+                        <label class="col-md-1 control-label">Dep.: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="departamento" class="form-control" value="<%= dato.departamento %>">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">Municipio: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="municipio" class="form-control" value="<%= dato.municipio %>">
+                        </div>
+
+
+                        <label class="col-md-2 control-label">Estado Civil: </label>
+                        <div class="col-md-2">
+                            <select class="form-control" name="estadocivil" value="<%= dato.estadocivil %>">
+                                <option value="soltero">Soltero</option>
+                                <option value="cadado">Casado</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+
+                        <label class="col-md-1 control-label">No. Cuenta: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="nocuenta" class="form-control" value="<%= dato.nocuenta %>">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">Profesion: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="profesion" class="form-control" value="<%= dato.profesion %>">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">Estado: </label>
+                        <div class="col-md-2">
+                                <select class="form-control" name="activo" value="<%= dato.activo %>">
+                                    <option value="1">Activo</option>
+                                    <option value="2">Inactivo</option>
+                                </select>
+                            </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <label class="col-md-1 control-label">Direccion: </label>
+                        <div class="col-md-8">
+                            <input type="text" name="direccion" class="form-control" value="<%= dato.direccion %>">
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<% include plantilla/final %>

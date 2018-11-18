@@ -1,0 +1,169 @@
+<% include plantilla/inicio%>
+
+
+
+<form action="/add" method="post">
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-primary text-center">
+                <div class="panel-heading">
+                    <label>
+                        <h4>Ingresar Empleado</h4>
+                    </label>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <input type="text" value="1" name="id_usuario" hidden>
+
+                        <label class="col-md-1 control-label">DPI: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="dpi" class="form-control">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">NIT: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="nit" class="form-control">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">No. IGSS: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="noigss" class="form-control">
+                        </div>
+
+
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary form-control">Guardar</button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+
+                        <label class="col-md-1 control-label">Nombre: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="pnombre" class="form-control" placeholder="Primer Nombre">
+                        </div>
+
+
+                        <div class="col-md-2">
+                            <input type="text" name="snombre" class="form-control" placeholder="Segundo Nombre">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">Apellido: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="papellido" class="form-control" placeholder="Primer Apellido">
+                        </div>
+
+
+                        <div class="col-md-2">
+                            <input type="text" name="sapellido" class="form-control" placeholder="Segundo Apellido">
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+
+                        <label class="col-md-1 control-label">Sexo: </label>
+                        <div class="col-md-1">
+                            <select class="form-control" name="sexo">
+                                <option value="M">M</option>
+                                <option value="F">F</option>
+                            </select>
+                        </div>
+
+
+                        <label class="col-md-1 control-label">Telefono: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="telefono" class="form-control">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">Correo: </label>
+                        <div class="col-md-2">
+                            <input type="email" name="correo" class="form-control">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">Pais: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="pais" class="form-control">
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+
+                        <label class="col-md-1 control-label">Dep.: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="departamento" class="form-control" placeholder="Departamento">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">Municipio: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="municipio" class="form-control">
+                        </div>
+
+
+                        <label class="col-md-2 control-label">Estado Civil: </label>
+                        <div class="col-md-2">
+                            <select class="form-control" name="estadocivil">
+                                <option value="soltero">Soltero</option>
+                                <option value="cadado">Casado</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+
+                        <label class="col-md-1 control-label">No. Cuenta: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="nocuenta" class="form-control">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">Profesion: </label>
+                        <div class="col-md-2">
+                            <input type="text" name="profesion" class="form-control">
+                        </div>
+
+
+                        <label class="col-md-1 control-label">Estado: </label>
+                        <div class="col-md-2">
+                                <select class="form-control" name="activo">
+                                    <option value="1">Activo</option>
+                                    <option value="2">Inactivo</option>
+                                </select>
+                            </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <label class="col-md-1 control-label">Direccion: </label>
+                        <div class="col-md-8">
+                            <input type="text" name="direccion" class="form-control">
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<% include plantilla/final %>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Empledo</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/alertify.min.js"></script>
+
+    <style>
+        .panel-heading{
+	      background-color: #2d7a6c !important;
+	      color: #ffffff !important;
+    }
+    .navbar{
+	      background-color: #2d7a6c !important;
+    }
+
+    .navbar-brand:link,.navbar-brand:visited{
+	      color: #ffffff !important;
+    }
+
+    .navbar-brand:hover,.navbar-brand:active{
+      	color: #050505 !important;
+    }
+
+    #navbar li a:link,#navbar li a:visited{
+	      color: #ffffff !important;
+    }
+
+    #navbar li a:hover,#navbar li a:active{
+      	color: #050505 !important;
+    }
+
+    
+  </style>
+
+</head>
+
+<body>
+    <br>
+    <form action="/contrato" method="post">
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-primary text-center">
+                    <div class="panel-heading">
+                        <label>
+                            <h4>CONTRATAR EMPLEADO</h4>
+                        </label>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <input type="text" value="1" name="id_usuario" hidden>
+                            <input type="text" value="<%= datoEmpleado.id_empleado %>" name="id_empleado" hidden>
+                        </div>
+
+                        <br>
+
+                        <div class="row">
+
+                            <label class="col-md-2 control-label">Departamento: </label>
+                            <div class="col-md-2">
+                                <select class="form-control" name="id_departamento">
+                                    <option value="1">Secretaria</option>
+                                    <option value="2">Gerencia</option>
+                                    <option value="3">Tesoreria</option>
+                                    <option value="4">Compras</option>
+                                    <option value="5">Estadistica</option>
+                                    <option value="6">Contabilidad</option>
+                                    <option value="7">Bodega</option>
+                                </select>
+                            </div>
+
+
+                            <label class="col-md-1 control-label">Puesto: </label>
+                            <div class="col-md-2">
+                                <select class="form-control" name="id_puesto">
+                                    <option value="1">Asistente Recurso H.</option>
+                                    <option value="2">Gerente</option>
+                                    <option value="3">Contador</option>
+                                    <option value="4">secretaria</option>
+                                    <option value="5">Jefa Recurso H.</option>
+                                    <option value="6">Estadigrafo</option>
+                                    <option value="7">Bodeguero</option>
+                                    <option value="8">Aux. de Bodega</option>
+                                    <option value="9">Piloto</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="row">
+
+                            <label class="col-md-2 control-label">Inicio Laboral: </label>
+                            <div class="col-md-2">
+                                <input type="text" name="iniciolaboral" placeholder="año - mes - dia" class="form-control">
+                            </div>
+
+
+                            <label class="col-md-2 control-label">Fin Laboral: </label>
+                            <div class="col-md-2">
+                                <input type="text" name="finallaboral" placeholder="año - mes - dia" class="form-control">
+                            </div>
+
+                        </div>
+
+                        <br>
+
+                        <div class="row">
+
+                            <label class="col-md-2 control-label">Forma de Pago: </label>
+                            <div class="col-md-2">
+                                <input type="text" name="formapago" class="form-control">
+                            </div>
+
+
+                            <label class="col-md-2 control-label">Salario: </label>
+                            <div class="col-md-2">
+                                <input type="text" name="salario" class="form-control">
+                            </div>
+
+                            <div class="col-md-2">
+                                <button type="submit" class="btn btn-primary form-control">contratar</button>
+                            </div>
+
+                        </div>
+
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <% include plantilla/final %>
